@@ -2,13 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const cookieparse = require('cookie-parser');
+const userRoutes = require('./routes/userRoutes.js');
+const questionRoutes = require('./routes/questionRoutes.js');
 // Body parsing, query string parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-
-
+// app.use('/', userRoutes);
+app.use('/api/questions', questionRoutes);
 
 
 // Global error handling middleware
