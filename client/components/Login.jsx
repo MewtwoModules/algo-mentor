@@ -12,6 +12,7 @@ function Login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const response = await axios.post('/login', { username, password });
+
     if (response.data.error) error = response.data.error;
     if (response.data.user_id) {
       setUserId(response.data.user_id);
