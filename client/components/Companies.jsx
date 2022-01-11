@@ -8,8 +8,8 @@ function Companies(props) {
   const [orgsList, setOrgsList] = useState([]);
   const navigate = useNavigate();
   useEffect(async () => {
-    //[{"organization":"facebook"},{"organization":"testing"},{"organization":"codesmith"}]
     try {
+      //{data:[{"organization":"facebook"},{"organization":"testing"},{"organization":"codesmith"}]}
       const response = await axios.get('/api/questions/org');
       //array of orgs eg ['facebook', 'testing', 'codesmith']
       setOrgs(
