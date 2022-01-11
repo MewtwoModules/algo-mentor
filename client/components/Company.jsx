@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation, useNavigate, generatePath } from 'react-router-dom';
 import axios from 'axios';
+import Question from './Question.jsx';
 
 function Company() {
   const { state } = useLocation();
@@ -12,28 +13,17 @@ function Company() {
       console.log(currCompany);
       //{data:[{"organization":"facebook"},{"organization":"testing"},{"organization":"codesmith"}]}
       const response = await axios.get(`/api/questions/${currCompany}`);
-      console.log(response);
-
-      // setOrgs(
-      //   response.data
-      //     .map((obj) => obj.organization)
-      //     .map((str) => (
-      //       <button
-      //         onClick={() =>
-      //           navigate(generatePath('/companies/:id', { id: str }), {
-      //             state: { str },
-      //           })
-      //         }
-      //       >
-      //         {str}
-      //       </button>
-      //     ))
-      // );
-      // console.log(orgs, 'here');
+      //console.log(response);
+      //[{organization: "facebook", qdetails: "adding two numbers", qid: 2, qtitle: "sum of two numbers", qtype: "algo", qurl: "facebook.com",userid: 2}]
+      setQuestionsList(response.data);
     } catch (err) {
       console.log(err);
     }
   }, []);
-  return <div>{currCompany}</div>;
+
+  const questions = questionsList.map((obj) => <Question props={obj} />);
+  console.log(questions[0]);
+  //console.log(questions);
+  return <div>{questions}</div>;
 }
 export default Company;
