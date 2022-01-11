@@ -4,20 +4,23 @@ import { useLocation } from 'react-router-dom';
 
 function Companies(props) {
   const { state } = useLocation();
-  const [orgs, setOrgs] = useState('');
+  const [orgs, setOrgs] = useState([]);
 
-  useEffect(() => {
+  useEffect(async () => {
     //[{"organization":"facebook"},{"organization":"testing"},{"organization":"codesmith"}]
     try {
       const response = await axios.get('/api/questions/org');
       //array of orgs eg ['facebook', 'testing', 'codesmith']
-      setOrgs(response.map((obj) => obj[organization]));
+      console.log(response.data);
+      setOrgs(response.data.map((obj) => obj.organization));
+      console.log(orgs);
     } catch (err) {
       console.log(err);
     }
   }, []);
-
-  return <div></div>;
+  console.log(orgs);
+  const orgList = orgs.map((str) => <p>{str}</p>);
+  return <div>{orgList}</div>;
 }
 
 export default Companies;
