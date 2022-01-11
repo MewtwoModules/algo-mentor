@@ -7,6 +7,8 @@ const pool = new Pool({
   connectionString: PG_URI,
 });
 
+const bcrypt = require('bcrypt');
+
 module.exports = {
   query: function (queryString, params, callback) {
     console.log(`Executed query: ${queryString}`);
