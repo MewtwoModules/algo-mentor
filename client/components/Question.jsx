@@ -5,12 +5,11 @@ function Question(props) {
     display: 'flex',
     flexDirection: 'row',
   };
-  //need to flex display row
   return (
     <div style={styles}>
       <p>{organization}</p>
       <p>{qtitle}</p>
-      <p>{}qdetails</p>
+      <p>{qdetails}</p>
       <p>{qtype}</p>
     </div>
   );
