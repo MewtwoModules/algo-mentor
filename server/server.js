@@ -8,7 +8,7 @@ const questionRoutes = require('./routes/questionRoutes.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use('/', userRoutes);
+app.use('/api/user', userRoutes);
 app.use('/api/questions', questionRoutes);
 
 // Global error handling middleware
