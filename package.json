@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server.js",
     "build": "webpack",
-    "dev": "concurrently \"webpack serve --open\" \"nodemon server/server.js\" "
+    "dev": "cross-env concurrently \"webpack serve --open\" \"nodemon server/server.js\" "
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,18 @@
     "url": "https://github.com/MewtwoModules/algo-mentor/issues"
   },
   "homepage": "https://github.com/MewtwoModules/algo-mentor#readme",
+  "options": {
+    "presets": [
+      {
+        "plugins": [
+          "@babel/plugin-transform-runtime"
+        ]
+      }
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
@@ -35,6 +45,7 @@
     "webpack-dev-server": "^4.7.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.16.7",
     "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",

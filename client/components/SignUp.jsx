@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function SignUp() {
-  const [user_id, setUserId] = userState('');
+  const [user_id, setUserId] = useState('');
   const navigate = useNavigate();
   let error;
 
@@ -14,8 +14,13 @@ function SignUp() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    const response = await axios.post('/signup', { name, email, username, password });
-    
+    const response = await axios.post('/signup', {
+      name,
+      email,
+      username,
+      password,
+    });
+
     if (response.data.error) error = response.data.error;
     if (response.data.user_id) {
       setUserId(response.data.user_id);
@@ -25,15 +30,15 @@ function SignUp() {
   return (
     <div>
       <h1>Sign Up</h1>
-      <form onSubmit={}>
+      <form onSubmit={handleSubmit}>
         <label>Name</label>
-        <input type='text' id="name"/>
+        <input type='text' id='name' />
         <label>Email</label>
-        <input type='text' id="email"/>
+        <input type='text' id='email' />
         <label>Username</label>
-        <input type='text' id="username"/>
+        <input type='text' id='username' />
         <label>Password</label>
-        <input type='text' id="password"/>
+        <input type='text' id='password' />
         <button type='submit'>Sign Up</button>
       </form>
       <Link to='/'>
