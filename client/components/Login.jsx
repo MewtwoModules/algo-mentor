@@ -23,9 +23,9 @@ function Login() {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label id="loginLabel">Username</label>
         <input type='text' id='username' />
-        <label>Password</label>
+        <label id="loginLabel">Password</label>
         <input type='text' id='password' />
         <button type='submit'>Login</button>
       </form>
