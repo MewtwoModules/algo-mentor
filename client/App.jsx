@@ -4,6 +4,8 @@ import Login from './components/Login.jsx';
 import SignUp from './components/SignUp.jsx';
 import Companies from './components/Companies.jsx';
 import Company from './components/Company.jsx';
+import Post from './components/Post.jsx';
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,6 +14,7 @@ export default function App() {
         <Route exact path='/signup' element={<SignUp />} />
         <Route exact path='/companies' element={<Companies />} />
         <Route exact path='/companies/:id' element={<Company />} />
+        <Route exact path='/post' element={<Post />} />
         {/* 
         
         
