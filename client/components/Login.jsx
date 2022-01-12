@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from '../styles.scss';
 
 function Login() {
   const [user_id, setUserId] = useState('');
@@ -23,9 +24,9 @@ function Login() {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label id="loginLabel">Username</label>
+        <label>Username</label>
         <input type='text' id='username' />
-        <label id="loginLabel">Password</label>
+        <label>Password</label>
         <input type='text' id='password' />
         <button type='submit'>Login</button>
       </form>

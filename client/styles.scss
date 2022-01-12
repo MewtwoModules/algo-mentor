@@ -1,4 +1,13 @@
-.loginLabel {
+body {
+    background-color: black;
+    line-height: 1.6;
+    background-image: url('https://api.time.com/wp-content/uploads/2019/06/what-is-half-christmas-workaholics.jpg');
+    background-size: cover;
+    // opacity: 70%;
+  }
+
+.formStyles {
     display: flex;
+    justify-content: center;
     align-items: center;
 }

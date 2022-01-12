@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function Modal({ props, setShowModal, showModal }) {
   const { organization, qdetails, qtitle, qtype, qurl } = props;
   console.log(props);
