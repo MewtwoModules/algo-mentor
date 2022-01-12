@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLocation, useNavigate, generatePath } from 'react-router-dom';
 import axios from 'axios';
 import Question from './Question.jsx';
+import NavBar from './NavBar.jsx';
 
 function Company() {
   const { state } = useLocation();
@@ -24,6 +25,11 @@ function Company() {
   const questions = questionsList.map((obj) => <Question props={obj} />);
   console.log(questions[0]);
   //console.log(questions);
-  return <div>{questions}</div>;
+  return (
+    <div>
+      <NavBar />
+      {questions}
+    </div>
+  );
 }
 export default Company;

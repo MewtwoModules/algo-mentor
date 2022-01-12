@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import NavBar from './NavBar.jsx';
 
 function Post() {
   const handlePost = () => {
@@ -17,6 +18,7 @@ function Post() {
 
   return (
     <div>
+      <NavBar />
       <h2>Company:</h2>
       <input id='company' />
       <h2>Title:</h2>
