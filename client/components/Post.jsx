@@ -23,18 +23,20 @@ function Post() {
     const qType = document.getElementById('type').value;
     const qURL = document.getElementById('url').value;
     const organization = document.getElementById('company').value;
-
+    const difficulty = document.getElementById('difficulty').value;
+    console.log(difficulty);
     const response = axios.post('/api/questions', {
       qTitle,
       qDetails,
       qType,
       qURL,
       organization,
+      difficulty,
     });
 
     //check if success or not and add message?
   };
-
+  const difficulties = ['Easy', 'Medium', 'Hard'];
   const categories = ['Algo', 'Systems Design', 'Behavioral', 'Misc'];
 
   return (
@@ -48,6 +50,8 @@ function Post() {
       <input id='detail' />
       <h2>Type:</h2>
       <Dropdown id='type' options={categories} />
+      <h2>Difficulty:</h2>
+      <Dropdown id='difficulty' options={difficulties} />
       <h2>URL:</h2>
       <input id='url' />
       <button
