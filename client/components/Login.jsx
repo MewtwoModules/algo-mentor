@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const response = await axios.post('/login', { username, password });
+    const response = await axios.post('/api/user/verifyUser', { username, password });
 
     if (response.data.error) error = response.data.error;
     if (response.data.user_id) {
@@ -27,12 +27,16 @@ function Login() {
         <label>Username</label>
         <input type='text' id='username' />
         <label>Password</label>
-        <input type='text' id='password' />
+        <input type='password' id='password' />
         <button type='submit'>Login</button>
       </form>
       <Link to='/signup'>
         <button>Sign Up</button>
       </Link>
+      <div>
+        <a href="/api/googleAuth"><button>Sign in with G</button></a>
+      </div>
+
       <div>{error}</div>
     </div>
   );

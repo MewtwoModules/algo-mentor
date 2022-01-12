@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate, generatePath } from 'react-router-dom';
+import NavBar from './NavBar.jsx';
 
 function Companies(props) {
   const { state } = useLocation();
@@ -17,6 +18,7 @@ function Companies(props) {
           .map((obj) => obj.organization)
           .map((str) => (
             <button
+              key={str}
               onClick={() =>
                 navigate(generatePath('/companies/:id', { id: str }), {
                   state: { str },
@@ -33,7 +35,12 @@ function Companies(props) {
     }
   }, []);
 
-  return <div>{orgs}</div>;
+  return (
+    <div>
+      <NavBar />
+      {orgs}
+    </div>
+  );
 }
 
 export default Companies;
