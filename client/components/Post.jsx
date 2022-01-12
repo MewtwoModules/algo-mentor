@@ -52,7 +52,7 @@ function Post() {
           handlePost();
         }}
       >
-        Close
+        Submit
       </button>
     </div>
   );

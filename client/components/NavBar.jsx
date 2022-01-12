@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-dom';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -11,4 +11,4 @@ function NavBar() {
   );
 }
 
-export default Logout;
+export default NavBar;
