@@ -22,11 +22,14 @@ function Post() {
     const qDetails = document.getElementById('detail').value;
     const qType = document.getElementById('type').value;
     const qURL = document.getElementById('url').value;
-    const response = axios.post('/api/question', {
+    const organization = document.getElementById('company').value;
+
+    const response = axios.post('/api/questions', {
       qTitle,
       qDetails,
       qType,
       qURL,
+      organization,
     });
 
     //check if success or not and add message?

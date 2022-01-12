@@ -18,6 +18,7 @@ function Companies(props) {
           .map((obj) => obj.organization)
           .map((str) => (
             <button
+              key={str}
               onClick={() =>
                 navigate(generatePath('/companies/:id', { id: str }), {
                   state: { str },
