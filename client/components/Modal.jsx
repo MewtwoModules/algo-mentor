@@ -8,18 +8,29 @@ function Modal({ props, setShowModal, showModal }) {
     setShowModal(false);
   };
   return (
-    <div>
+    <div id="questionStyles">
+      <div id="qElement">
       <h2>Company:</h2>
       <p>{organization}</p>
+      </div>
+      <div id="qElement">
       <h2>Title:</h2>
       <p>{qtitle}</p>
+      </div>
+      <div id="qElement">
       <h2>Details:</h2>
       <p>{qdetails}</p>
+      </div>
+      <div id="qElement">
       <h2>Type:</h2>
       <p>{qtype}</p>
+      </div>
+      <div id="qElement">
       <h2>URL:</h2>
-      <p>{qurl}</p>
-      <button
+      <a href={qurl} target="_blank">{qurl}</a>
+      </div>
+      <div>
+        <button id="closeModalBtn"
         onClick={() => {
           closeModal();
           console.log(showModal);
@@ -27,6 +38,7 @@ function Modal({ props, setShowModal, showModal }) {
       >
         Close
       </button>
+      </div>
     </div>
   );
 }

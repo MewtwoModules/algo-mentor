@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import reactDom from 'react-dom';
 import Modal from './Modal.jsx';
 function Question(props) {
-  const { organization, qdetails, qtitle, qtype } = props.props;
+  const { organization, qdetails, qtitle, qtype, difficulty } = props.props;
   const [showModal, setShowModal] = useState(false);
 
   const styles = {
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: 'red',
+    backgroundColor: 'black',
   };
 
   const toggleModal = () => {
     setShowModal(true);
   };
   return (
-    <div>
+    <div id="questionContainer">
       <div
         style={styles}
         onClick={() => {
@@ -27,6 +27,7 @@ function Question(props) {
         <p>{qtitle}</p>
         <p>{qdetails}</p>
         <p>{qtype}</p>
+        <p>{difficulty}</p>
       </div>
       {showModal ? (
         <Modal

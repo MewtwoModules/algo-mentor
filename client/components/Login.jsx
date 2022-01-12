@@ -22,19 +22,29 @@ function Login() {
   };
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input type='text' id='username' />
-        <label>Password</label>
-        <input type='password' id='password' />
-        <button type='submit'>Login</button>
-      </form>
+      <div id="formStyles">
+        <h1 id="loginTitle">Login</h1>
+      </div>
+      <div id="formStyles">
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label id="formLabel"><b>Username</b></label>
+            <input class="formInput" type='text' id='username' />
+          </div>
+          <div>
+            <label id="formLabel"><b>Password</b></label>
+            <input class="formInput" type='password' id='password' />
+          </div>
+          <div id="formStyles">
+            <button  id="navBtn" type='submit'>Login</button>
+          </div>
+        </form>
+      </div>
+      <div id="formStyles">
       <Link to='/signup'>
-        <button>Sign Up</button>
+        <button id="navBtn">Sign Up</button>
       </Link>
-      <div>
-        <a href="/api/googleAuth"><button>Sign in with G</button></a>
+        <a href="/api/googleAuth"><button id="navBtn">Sign in with G</button></a>
       </div>
 
       <div>{error}</div>
