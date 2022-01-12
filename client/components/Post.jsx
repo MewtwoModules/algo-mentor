@@ -23,13 +23,15 @@ function Post() {
     const qType = document.getElementById('type').value;
     const qURL = document.getElementById('url').value;
     const organization = document.getElementById('company').value;
-
+    const difficulty = document.getElementById('difficulty').value;
+    console.log(difficulty);
     const response = axios.post('/api/questions', {
       qTitle,
       qDetails,
       qType,
       qURL,
       organization,
+      difficulty,
     });
 
     //check if success or not and add message?
