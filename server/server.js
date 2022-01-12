@@ -7,6 +7,7 @@ const cookieSession = require('cookie-session');
 const userRoutes = require('./routes/userRoutes.js');
 const questionRoutes = require('./routes/questionRoutes.js');
 require('./passport');
+
 // Body parsing, query string parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -85,3 +86,7 @@ app.use((err, req, res, next) => {
 app.listen(3000, () => {
   console.log('Listening on PORT 3000...');
 });
+
+//api/user/createUser
+//api/user/verifyUser
+//api/questions/org
