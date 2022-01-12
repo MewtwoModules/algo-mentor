@@ -11,7 +11,6 @@ function Company() {
   const [questionsList, setQuestionsList] = useState([]);
   useEffect(async () => {
     try {
-      console.log(currCompany);
       //{data:[{"organization":"facebook"},{"organization":"testing"},{"organization":"codesmith"}]}
       const response = await axios.get(`/api/questions/${currCompany}`);
       //console.log(response);
@@ -22,9 +21,10 @@ function Company() {
     }
   }, []);
 
-  const questions = questionsList.map((obj) => <Question props={obj} />);
-  console.log(questions[0]);
-  //console.log(questions);
+  const questions = questionsList.map((obj) => (
+    <Question key={obj.qid} props={obj} />
+  ));
+
   return (
     <div>
       <NavBar />

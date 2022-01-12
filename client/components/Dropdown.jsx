@@ -2,7 +2,8 @@ import React from 'react';
 
 function Dropdown(props) {
   const { options } = props;
-  const id = { props };
+  const { id } = props;
+
   const dropdownOptions = [];
   for (const option of options) {
     dropdownOptions.push(
