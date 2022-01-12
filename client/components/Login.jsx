@@ -32,6 +32,9 @@ function Login() {
       <Link to='/signup'>
         <button>Sign Up</button>
       </Link>
+      <div>
+        <a href="/api/googleAuth"><button>Sign in with G</button></a>
+      </div>
       <div>{error}</div>
     </div>
   );
