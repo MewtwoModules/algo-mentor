@@ -40,6 +40,7 @@ module.exports = {
     proxy: {
       '/api': 'http://localhost:3000',
       '/google': 'http://localhost:3000',
+      '/logout': 'http://localhost:3000',
       // '/**': { target: 'http://localhost:3000' },
     },
   },
