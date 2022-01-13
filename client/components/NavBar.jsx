@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <div>
-      {/* <h1 class="srcTitle">ALGO-MENTOR</h1> */}
       <div id="navStyles">
       <nav >
         <Link to='/companies'><button id="navBtn">Companies</button></Link>
