@@ -15,9 +15,10 @@ function Companies(props) {
       //array of orgs eg ['facebook', 'testing', 'codesmith']
       setOrgs(
         response.data
-          .map((obj) => obj.organization)
+          .map((obj) => obj.organization).sort()
           .map((str) => (
-            <button
+            <div id="companyContainer">
+              <button id="companyButton"
               key={str}
               onClick={() =>
                 navigate(generatePath('/companies/:id', { id: str }), {
@@ -27,6 +28,7 @@ function Companies(props) {
             >
               {str}
             </button>
+            </div>
           ))
       );
       console.log(orgs, 'here');
