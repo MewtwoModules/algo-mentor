@@ -6,4 +6,4 @@ Algo mentor is a website to help job searchers find and submit employer specific
 
 # Tech Stack
 
-React, React Router, Express, PostgreSQL, Bcrypt, OAuth
+React, React Router, Express, PostgreSQL, Jest, Bcrypt, OAuth
