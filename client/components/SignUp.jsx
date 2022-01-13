@@ -29,21 +29,43 @@ function SignUp() {
   };
   return (
     <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input type='text' id='name' />
-        <label>Email</label>
-        <input type='text' id='email' />
-        <label>Username</label>
-        <input type='text' id='username' />
-        <label>Password</label>
-        <input type='password' id='password' />
-        <button type='submit'>Sign Up</button>
-      </form>
-      <Link to='/'>
-        <button>Login</button>
-      </Link>
+      <div id="formStyles">
+        <h1 id="loginTitle">Sign Up</h1>
+      </div>  
+      <div id="formStyles">
+        <form onSubmit={handleSubmit}>
+        <div>
+          <label id="formLabel">Name</label>
+        </div>
+        <div>
+          <input class="formInput" type='text' id='name' />
+        </div>
+        <div>
+          <label id="formLabel">Email</label>
+        </div>
+        <div>
+          <input class="formInput" type='text' id='email' />
+        </div>
+        <div>  
+          <label id="formLabel">Username</label>
+        </div>
+        <div>
+          <input class="formInput" type='text' id='username' />
+        </div>
+        <div>  
+          <label id="formLabel">Password</label>
+        </div>
+        <div>  
+          <input class="formInput" type='password' id='password' />
+        </div>
+        <div id="formStyles">
+          <button id="navBtn" type='submit'>Sign Up</button>
+          <Link to='/'>
+          <button id="navBtn">Login</button>
+          </Link>
+        </div>
+        </form>
+      </div>
     </div>
   );
 }

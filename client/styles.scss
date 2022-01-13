@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 $main-font: 'Bebas Neue', cursive;
+$primary-text-color: whitesmoke;
 $accent-color: #B3E6EA;
 
 .srcTitle {
   font-family: $main-font;
   font-size: 175px;
+  color: whitesmoke;
   // background-color: black;
   // text-shadow: 10px 10px #B3E6EA;
   // text-shadow: 10px 5px #B3E6EA;
@@ -17,10 +19,10 @@ $accent-color: #B3E6EA;
 }
 
 #orb {
+  position: fixed; 
   top: 2%; 
-	position: fixed; 
 	right: 1%;
-	opacity: 100%;
+	// opacity: 100%;
 }
 
 a {
@@ -32,7 +34,7 @@ a {
 
 h1 {
   font-family: $main-font;
-  color: white;
+  color: $primary-text-color;
   // padding-right: 30px;
   
 }
@@ -47,7 +49,7 @@ h2 {
 p {
   font-family: $main-font;
   font-size: 30px;
-  color: white;
+  color: $primary-text-color;
   padding-right: 5px;
   padding-left: 20px;
 }
@@ -68,7 +70,7 @@ body {
 #loginTitle {
   // text-shadow: 3px 3px #B3E6EA;
   font-size: 60px;
-  color: white;
+  color: $primary-text-color;
   height: 40px;
 }
 
@@ -188,5 +190,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  width: 475px;
+  height: 40px;
 }
 
