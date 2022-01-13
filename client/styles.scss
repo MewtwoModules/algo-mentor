@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 $main-font: 'Bebas Neue', cursive;
+$accent-color: #B3E6EA;
 
 .srcTitle {
   font-family: $main-font;
-  font-size: 150px;
-  text-shadow: 10px 10px #B3E6EA;
+  font-size: 175px;
+  // background-color: black;
+  // text-shadow: 10px 10px #B3E6EA;
   // text-shadow: 10px 5px #B3E6EA;
   padding-left: 30px;
   height: 90px;
@@ -14,10 +16,18 @@ $main-font: 'Bebas Neue', cursive;
   // padding-right: 10px;
 }
 
+#orb {
+  top: 2%; 
+	position: fixed; 
+	right: 1%;
+	opacity: 100%;
+}
+
 a {
-  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
   padding-left: 20px;
-  padding-bottom: 20px
+  // padding-bottom: 20px;
 }
 
 h1 {
@@ -29,14 +39,14 @@ h1 {
 
 h2 {
   font-family: $main-font;
-  font-size: 40px;
-  color: #B3E6EA;
+  font-size: 50px;
+  color: $accent-color;
   padding-left: 20px;
 }
 
 p {
   font-family: $main-font;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   padding-right: 5px;
   padding-left: 20px;
@@ -90,12 +100,12 @@ body {
 
 #navBtn {
   // display: flex;
-	box-shadow: 0px 10px 14px -7px #B3E6EA;
-	height: 40px;
+	box-shadow: 0px 10px 14px -7px $accent-color;
+	height: 50px;
 	width: 200px;
   font-family: $main-font;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
 	// padding-right: 100px;
 	border-radius: 5px 5px;
 	border: none;
@@ -108,39 +118,43 @@ body {
 #navBtn:hover {
   background-color: black;
   color: white;
-  transition: 3s;
+  transition: 1s;
 }
 #questionContainer {
   border-style: solid;
   border-color: white;
-  margin-left: 20px;
-  
+  margin-left: 20px; 
 }
+
 #questionStyles {
   display: flex;
   text-align: center;
   flex-wrap: row-wrap;
   padding-right: 30px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  #qElement {
+#qElement {
   border-style: solid;
-  border-color: #B3E6EA;
+  border-color: $accent-color;
   padding: 20px 40px 20px 20px;
 }
-}
+
 #companyContainer {
   display: flex;
+  // flex-wrap: row-wrap;
   // align-content: space-evenly
   // flex-wrap: wrap;
   // align-content: flex-start;
   justify-content: center;
-  // justify-content: center;
   
 }
 #companyButton {
   font-size: 60px;
   height: 80px;
-  width: 500px;
+  width: 1000px;
   box-shadow: 0px 10px 14px -7px whitesmoke;
   font-family: $main-font;
   text-align: center;
@@ -154,7 +168,7 @@ body {
 #companyButton:hover {
   background-color: black;
   color: white;
-  transition: 3s;
+  transition: 1s;
 }
 
 #closeModalBtn {
@@ -163,12 +177,12 @@ body {
   margin : 40px 40px 40px 40px;
   padding : 40px 40px 40px 40px;
   border-radius: 15px;
-  box-shadow: 0px 10px 14px -7px #B3E6EA;
+  box-shadow: 0px 10px 14px -7px $accent-color;
 }
 #closeModalBtn:hover {
   background-color: black;
   color: white;
-  transition: 3s;
+  transition: 1s;
 }
 .formInput {
   display: flex;
